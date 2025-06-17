@@ -1,0 +1,495 @@
+/* ------------------------ */
+/* 🎨 ESTILO GENERAL DEL SITIO */
+/* ------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fceee5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  padding-top: 100px; /* espacio para header fijo */
+}
+
+/* ------------------------ */
+/* LOADER */
+/* ------------------------ */
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-family: sans-serif;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #FF69B4; /* color rosado para estilo helado */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loader-text {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* ------------------------ */
+/* 🧁 ENCABEZADO PRINCIPAL */
+/* ------------------------ */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* fondo negro */
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor del menú */
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo + título */
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.logo-titulo h1 {
+  color: #fff;
+  font-size: 1.4em;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Enlaces del menú */
+.enlaces {
+  display: flex;
+  gap: 25px;
+}
+
+.enlaces a {
+  color: #ff6600;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: 2px solid #ff6600;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  transition: 0.3s ease;
+}
+
+/* Hover elegante */
+.enlaces a:hover {
+  color: #fff;
+  background-color: #ff6600;
+  box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600;
+}
+
+/* ------------------------ */
+/* 🔶 MENÚ DE NAVEGACIÓN CON FONDO NEGRO Y GLOW */
+/* ------------------------ */
+
+.menu {
+  width: 100%;
+  background-color: #000; /* Fondo negro en todo el nav */
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #ff6600; /* Letras naranja */
+  font-weight: bold;
+  padding: 10px 25px;
+  border: 1px solid #ff6600;
+  border-radius: 5px;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+}
+
+/* Hover: cambia color, fondo y agrega efecto glow */
+.menu a:hover {
+  color: #fff;
+  background-color: #ff6600;
+  box-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600;
+}
+
+/* ------------------------ */
+/* 🏠 SECCIÓN DE INICIO  */
+/* ------------------------ */
+
+.bloque-inicio {
+  position: relative; /* Permite superponer el texto encima de la imagen */
+  width: 100%;
+  height: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Imagen de fondo */
+.img-inicio {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.6); /* Oscurece la imagen para resaltar el texto */
+}
+
+/* Contenedor del texto encima de la imagen */
+.texto-inicio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el texto completamente */
+  color: #fff;
+  padding: 20px;
+  max-width: 90%;
+}
+
+/* Título del bloque */
+.texto-inicio h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* Sombra para mejor visibilidad */
+}
+
+/* Párrafo del bloque */
+.texto-inicio p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Botón de acción */
+.texto-inicio .btn {
+  background-color: #ff5e5e;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.texto-inicio .btn:hover {
+  background-color: #e74c3c;
+}
+
+/* ------------------------ */
+/* 🎯 SECCIÓN DE SERVICIOS */
+/* ------------------------ */
+
+.bloque-servicios {
+  padding: 60px 30px;
+  background-color: #fff7f9; /* Fondo rosado suave */
+  text-align: center;
+}
+
+.bloque-servicios p {
+  font-size: 1.2em;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ------------------------ */
+/* 🍦 SECCIÓN POPULARES */
+/* ------------------------ */
+/* Contenedor de fila: agrupa columnas horizontalmente con separación negativa entre ellas */
+.row {
+  display: flex;              /* Activa el diseño flexbox */
+  flex-wrap: wrap;            /* Permite que las columnas bajen si no hay espacio */
+  margin-left: -15px;         /* Compensa el padding interno de las columnas */
+  margin-right: -15px;
+  justify-content: center;    /* Centra los elementos dentro de la fila */
+}
+/* Estilo general para cada columna */
+.columna {
+  padding: 15px;              /* Espacio interno alrededor del contenido */
+  box-sizing: border-box;     /* Incluye padding dentro del ancho total */
+}
+/* Columnas que ocupan el 30% del ancho en pantallas grandes */
+.columna-33 {
+  flex: 0 0 30%;              /* No se expande, no se reduce, ocupa 30% */
+  max-width: 30%;
+}
+/* Responsivo: columnas ocupan 100% del ancho en pantallas menores a 768px */
+@media screen and (max-width: 768px) {
+  .columna-33 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* Cuadro contenedor de imagen con proporción fija */
+.cuadrado-perfecto {
+  width: 100%;                /* Ocupa todo el ancho del contenedor */
+  padding-bottom: 80%;        /* Altura proporcional al ancho (relación 4:5) */
+  position: relative;         /* Para posicionar la imagen dentro */
+  overflow: hidden;           /* Oculta el desbordamiento */
+}
+/* Imagen dentro del cuadro cuadrado */
+.cuadrado-perfecto img {
+  position: absolute;         /* Permite posicionarla dentro del cuadrado */
+  width: 100%;                /* Se ajusta completamente al ancho */
+  height: 100%;               /* Se ajusta completamente a la altura */
+  object-fit: cover;          /* Escala la imagen para cubrir todo el cuadro */
+  top: 0;
+  left: 0;
+}
+/* Caja individual de cada servicio (tarjeta de helado) */
+.bloque-servicio {
+  background: #fff;           /* Fondo blanco */
+  border-radius: 8px;         /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  overflow: hidden;           /* Oculta el contenido que sobresale */
+  text-align: center;         /* Centra el texto dentro del bloque */
+}
+/* Contenedor del texto dentro de la tarjeta */
+.bloque-contenido-servicio {
+  padding: 12px;              /* Espacio interno (más pequeño que antes) */
+}
+/* Título del helado */
+.bloque-contenido-servicio h3 {
+  margin-top: 0;
+  font-size: 16px;            /* Tamaño de letra reducido */
+}
+/* Descripción del helado */
+.bloque-contenido-servicio p {
+  font-size: 14px;            /* Tamaño de texto de descripción */
+  margin-bottom: 10px;
+}
+/* Estilo del botón "Ver más" */
+.boton.boton-servicios {
+  display: inline-block;      /* Se comporta como bloque pero en línea */
+  margin-top: 10px;
+  padding: 6px 12px;          /* Tamaño más pequeño que el original */
+  font-size: 12px;
+  font-weight: bold;
+  color: blue;
+  border: 1px solid blue;
+  background-color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s;           /* Transición suave al pasar el mouse */
+}
+/* Efecto hover del botón */
+.boton.boton-servicios:hover {
+  background-color: blue;
+  color: white;
+}
+/* 🎯 Título principal "Helados Populares" con estilo moderno */
+.titulo-populares {
+  text-align: center;
+  font-size: 36px;
+  color: rgb(31, 31, 31);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* Línea decorativa con animación de color */
+.titulo-populares::after {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 2px;
+  opacity: 0.7;
+  animation: cambioColor 4s infinite alternate;
+}
+/* Animación de colores RGB */
+@keyframes cambioColor {
+  0%   { background-color: rgb(255, 0, 102); }   /* Fucsia */
+  25%  { background-color: rgb(0, 123, 255); }   /* Azul */
+  50%  { background-color: rgb(0, 200, 150); }   /* Verde menta */
+  75%  { background-color: rgb(255, 210, 50); }  /* Amarillo pastel */
+  100% { background-color: rgb(255, 100, 150); } /* Rosa claro */
+}
+
+/* ------------------------ */
+/* 📩 SECCIÓN CONTÁCTENOS */
+/* ------------------------ */
+.bloque-contactenos {
+  background: url('../img/logo.jpg') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container-contacto {
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.3); /* medio transparente */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(4px); /* opcional para efecto de vidrio */
+}
+
+.titulo-contacto {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(31, 31, 31);
+  position: relative;
+  font-weight: bold;
+}
+
+.titulo-contacto::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 5px auto 15px;
+  border-radius: 3px;
+  background: linear-gradient(to right, rgb(0, 123, 255), rgb(0, 200, 150));
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.formulario-contacto textarea {
+  resize: none;
+  height: 60px;
+}
+
+.boton-contacto {
+  background-color: rgb(0, 123, 255);
+  color: white;
+  padding: 12px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.boton-contacto:hover {
+  background-color: rgb(0, 100, 210);
+}
+
+/* ------------------------ */
+/* 📹 VIDEO PROMOCIONAL */
+/* ------------------------ */
+
+.video-promocional {
+  margin: 30px 0;
+}
+
+/* ------------------------ */
+/* 🍨 CATEGORÍAS */
+/* ------------------------ */
+
+.categorias h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.menu-categorias a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #ff8888;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu-categorias a:hover {
+  background-color: #e77474;
+  border: 2px solid #ff3333;
+}
+
+/* ------------------------ */
+/* 🦶 PIE DE PÁGINA */
+/* ------------------------ */
+footer {
+  background-color: #ffdede;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ff4081; /* Color rosado al pasar el mouse */
+}
+
+footer i {
+  margin-right: 5px;
+}
+
+footer hr {
+  margin: 30px 0;
+  border: 1px solid #ccc;
+}
